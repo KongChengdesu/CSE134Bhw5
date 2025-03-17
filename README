@@ -1,0 +1,1 @@
+Firstly, I removed some of the duplicate features like the theme toggle button in favor of the theme picker, that I improved by fixing bugs and adding more persistent memory to. I also added a feature that I originally planned, where the navbar buttons gets highlighted whenever the corresponding section is in view.

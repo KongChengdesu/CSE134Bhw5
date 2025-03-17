@@ -1,1 +1,0 @@
-Firstly, I removed some of the duplicate features like the theme toggle button in favor of the theme picker. 
