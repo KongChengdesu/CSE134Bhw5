@@ -29,11 +29,31 @@ function createProject(project, container) {
 
 // On page load, fetch the projects and create a card for each
 document.addEventListener('DOMContentLoaded', async () => {
-    const response = await fetch('https://api.jsonbin.io/v3/b/67d7a2758960c979a573088b');
-    const projects = (await response.json()).record.projects;
-    console.log(projects);
+    //const response = await fetch('https://api.example.com/projects');
+    //const projects = await response.json();
+    const projects = [
+        {
+            name: 'Game Development',
+            image: 'project1-thumbnail.jpg',
+            description: 'Development of indie titles like Talis Stand, Sweet Doll... ',
+            url: 'project1-details.html'
+        },
+        {
+            name: 'AI Chatbot',
+            image: 'project2-thumbnail.jpg',
+            description: 'Natural Language Processing chatbot built with OpenAI...',
+            url: 'project1-details.html'
+        },
+        {
+            name: 'Discord Auto Admin',
+            image: 'project3-thumbnail.jpg',
+            description: 'Discord app that provides several admin functions and fun minigames...',
+            url: 'project1-details.html'
+        }
+    ];
 
     const container = document.querySelector('#projects-container');
+    console.log(projects);
     projects.forEach(project => createProject(project, container));
 
 });
