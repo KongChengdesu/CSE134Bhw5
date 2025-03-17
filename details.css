@@ -3,39 +3,75 @@
     --main-color: #B3261E;
     --secondary-color: #333;
     --text-color: #000;
+    --error-color: #b50000;
     --tertiary-color: #f0f0f0;
 
 }
 
 body {
-
     margin: 0;
     padding: 3%;
     font-family: Arial, sans-serif, Helvetica;
     background-color: var(--tertiary-color, #f0f0f0);
     color: var(--text-color, #000);
-
 }
 
+header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Layout for Image and Paragraph */
 img {
-
     display: block;
-    width: 80%;
+    width: 40%;
     height: auto;
-    margin: 0 auto 1rem;
+    float: left;
+    margin: 0 1.5rem 1rem 0;
     border-radius: 2%;
-
 }
 
 p {
-
-    width: 80%;
-    margin: 0 auto;
+    width: auto;
     padding: 1rem;
     background-color: #fff;
     border-radius: 2%;
     box-shadow: 0 1% 5% rgba(0, 0, 0, 0.1);
     line-height: 1.6;
     text-align: justify;
-    
+    overflow: hidden;
+}
+
+/* Back Button Styling */
+button {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8d1e17;
+}
+
+footer {
+
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--tertiary-color, #f0f0f0);
+    color: var(--text-color, #000);
+    font-size: 0.8em;
+
 }
