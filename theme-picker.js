@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load saved theme
     const selectedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', selectedTheme);
+    themeSelect.value = selectedTheme;
     const customTheme = localStorage.getItem('custom-theme');
     if (customTheme && selectedTheme === 'custom') {
         applyTheme(JSON.parse(customTheme));
