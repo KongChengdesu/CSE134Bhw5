@@ -1,0 +1,41 @@
+:root {
+
+    --main-color: #B3261E;
+    --secondary-color: #333;
+    --text-color: #000;
+    --tertiary-color: #f0f0f0;
+
+}
+
+body {
+
+    margin: 0;
+    padding: 3%;
+    font-family: Arial, sans-serif, Helvetica;
+    background-color: var(--tertiary-color, #f0f0f0);
+    color: var(--text-color, #000);
+
+}
+
+img {
+
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 2%;
+
+}
+
+p {
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 2%;
+    box-shadow: 0 1% 5% rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    text-align: justify;
+    
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe's Page</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="fixed-index">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <article id="profile">
+                <picture>
+                    <source media="(max-width: 300px)" srcset="profile_large.jpg">
+                    <img src="profile_small.jpg" alt="Profile photo">
+                </picture>
+                <hgroup>
+                    <h3>Felipe Kai Hu</h3>
+                    <p>Undergraduate Student in Electrical & Computer Engineering</p>
+                </hgroup>
+            </article>
+
+            <article>
+                <h2>About Me</h2>
+                <p>
+                    Hi! I'm Felipe, a student at UCSD studying Electrical & Computer Engineering. I'm passionate about technology and enjoy building projects that make a difference. I'm currently learning web development and excited to share my journey with you!
+                </p>
+                <p>
+                    I am from Brazil and moved to the United States for college. I speak Portuguese, English, and Mandarin. In my free time, I enjoy playing video games and watching movies.
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div id="slides-container">
+                <article class="project-slide">
+                    <picture>
+                        <!-- Image source: https://unsplash.com/photos/black-laptop-computer-beside-controller-on-brown-wooden-surface-XC3fq-ffXRI?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash -->
+                        <source media="(max-width: 300px)" srcset="project1-thumbnail.jpg">
+                        <img src="project1-thumbnail-small.jpg" alt="Game Development">
+                    </picture>
+                    <h3>Game Development</h3>
+                    <p>Development of indie titles like Talis Stand, Sweet Doll... <a href="project1-details.html">View Details</a></p>
+                </article>
+
+                <article class="project-slide">
+                    <picture>
+                        <!-- Image source: https://unsplash.com/photos/colorful-software-or-web-code-on-a-computer-monitor-Skf7HxARcoc?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash -->
+                        <source media="(max-width: 300px)" srcset="project2-thumbnail.jpg">
+                        <img src="project2-thumbnail-small.jpg" alt="AI Chatbot Project">
+                    </picture>
+                    <h3>AI Chatbot</h3>
+                    <p>Natural Language Processing chatbot built with OpenAI... <a href="project1-details.html">View Details</a></p>
+                </article>
+
+                <article class="project-slide">
+                    <picture>
+                        <!-- Image source: https://unsplash.com/photos/pink-and-black-hello-kitty-clip-art-sIFCJHrUWPM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash -->
+                        <source media="(max-width: 300px)" srcset="project3-thumbnail.jpg">
+                        <img src="project3-thumbnail-small.jpg" alt="Discord Auto Admin">
+                    </picture>
+                    <h3>Discord Auto Admin</h3>
+                    <p>Discord app that provides several admin functions and fun minigames... <a href="project1-details.html">View Details</a></p>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="experiences">
+            <h2>Work Experiences</h2>
+            <table>
+                <colgroup>
+                    <col span="1" style="width: 20%;">
+                    <col span="1" style="width: 80%;">
+                </colgroup>
+                <tr>
+                    <th>Year</th>
+                    <th>Position</th>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Lead Developer</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="goals">
+            <h2>Future Goals</h2>
+            <ol>
+                <li>Learn JS</li>
+                <li>Build a personal website</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            
+            <article id="contact-form">
+                <h3>Contact me</h3>
+                <form  action="https://httpbin.org/post" method="POST">
+                    <label for="name">Name<em>*</em>:</label>
+                    <input type="text" id="name" name="name" placeholder=" " pattern="[a-zA-Z ]+" required>
+                    <label for="name" class="validation-label">Only letters and spaces allowed</label>
+            
+                    <br><br>
+            
+                    <label for="email">Email<em>*</em>:</label>
+                    <input type="email" id="email" name="email" placeholder=" " pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    <label for="email" class="validation-label">Invalid e-mail</label>
+            
+                    <br><br>
+            
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" maxlength="500"></textarea>
+            
+                    <br><br>
+            
+                    <input type="hidden" name="possible_bot" value="true">
+            
+                    <button type="submit">Submit</button>
+                </form>
+
+                <p id="form-response"></p>
+
+                <p><em>*</em> Required fields</p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <small>© 2025 UCSD</small>
+        <noscript>Please enable JavaScript for full functionality</noscript>
+    </footer>
+</body>
+</html>
