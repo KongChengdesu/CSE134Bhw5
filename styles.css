@@ -136,14 +136,14 @@ nav.fixed-index ul li:hover a {
 
 }
 
-#slides-container {
+#projects-container {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 }
 
-.project-slide {
+project-card {
 
     display: grid;
     justify-items: center;
@@ -153,10 +153,17 @@ nav.fixed-index ul li:hover a {
 
 }
 
-.project-slide img {
+project-card img {
     
     width: 100%;
     border-radius: 5%;
+
+}
+
+project-card h2 {
+
+    margin: 1rem 0;
+    font-size: 1.2rem;
 
 }
 
