@@ -8,11 +8,15 @@ function createProject(project, container) {
     const title = document.createElement('h2');
     title.textContent = project.name;
     projectCard.appendChild(title);
-    // Populate with <picture><img src="project.image" alt="project.name"></picture>
+    // Populate with <picture><source media="(min-width: 300)" srcset="project.image"><img src="project.small_image" alt="project.name"></picture>
     const picture = document.createElement('picture');
+    const source = document.createElement('source');
+    source.media = '(min-width: 300px)';
+    source.srcset = project.image;
     const image = document.createElement('img');
     image.src = project.image;
     image.alt = project.name;
+    picture.appendChild(source);
     picture.appendChild(image);
     projectCard.appendChild(picture);
     // Populate with <p>Project Description</p>
@@ -67,18 +71,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         {
             name: 'Game Development',
             image: 'project1-thumbnail.jpg',
+            small_image: 'project1-thumbnail-small.jpg',
             description: 'Development of indie titles like Talis Stand, Sweet Doll... ',
             url: 'project1-details.html'
         },
         {
             name: 'AI Chatbot',
             image: 'project2-thumbnail.jpg',
+            small_image: 'project2-thumbnail-small.jpg',
             description: 'Natural Language Processing chatbot built with OpenAI...',
             url: 'project1-details.html'
         },
         {
             name: 'Discord Auto Admin',
             image: 'project3-thumbnail.jpg',
+            small_image: 'project3-thumbnail-small.jpg',
             description: 'Discord app that provides several admin functions and fun minigames...',
             url: 'project1-details.html'
         }
