@@ -91,14 +91,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       image: 'project2-thumbnail.jpg',
       small_image: 'project2-thumbnail-small.jpg',
       description: 'Natural Language Processing chatbot built with OpenAI...',
-      url: 'project1-details.html'
+      url: 'project2-details.html'
     },
     {
       name: 'Discord Auto Admin',
       image: 'project3-thumbnail.jpg',
       small_image: 'project3-thumbnail-small.jpg',
       description: 'Discord app that provides several admin functions and fun minigames...',
-      url: 'project1-details.html'
+      url: 'project3-details.html'
     }
   ];
 
