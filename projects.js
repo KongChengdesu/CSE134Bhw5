@@ -27,10 +27,26 @@ function createProject(project, container) {
 
 }
 
+function loadLocalStorage() {
+    const projects = JSON.parse(localStorage.getItem('projects'));
+    const container = document.querySelector('#projects-container');
+    projects.forEach(project => createProject(project, container));
+}
+
+function saveLocalStorage(projects) {
+    localStorage.setItem('projects', JSON.stringify(projects));
+}
+
+async function loadRemoteStorage() {
+    const response = await fetch('https://api.jsonbin.io/v3/b/67d7a2758960c979a573088b');
+    const projects = (await response.json()).record.projects;
+    const container = document.querySelector('#projects-container');
+    projects.forEach(project => createProject(project, container));
+}
+
 // On page load, fetch the projects and create a card for each
 document.addEventListener('DOMContentLoaded', async () => {
-    //const response = await fetch('https://api.example.com/projects');
-    //const projects = await response.json();
+    
     const projects = [
         {
             name: 'Game Development',
@@ -52,8 +68,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     ];
 
-    const container = document.querySelector('#projects-container');
-    console.log(projects);
-    projects.forEach(project => createProject(project, container));
+    saveLocalStorage(projects);
 
 });

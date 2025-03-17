@@ -136,6 +136,33 @@ nav.fixed-index ul li:hover a {
 
 }
 
+#projects-controls {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#projects button {
+
+    background-color: var(--main-color, #B3261E);
+    color: #fff;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 1rem 0.5rem;
+    width: 8vw;
+
+}
+
+#projects button:hover {
+
+    background-color: #8F1E18;
+
+}
+
 #projects-container {
 
     display: grid;
