@@ -107,6 +107,13 @@ nav.fixed-index ul li:hover a {
 
 }
 
+nav.fixed-index ul li.nav-highlight {
+
+    color: var(--main-color, #B3261E);
+    font-size: 1.5em;
+
+}
+
 #about {
 
     display: grid;

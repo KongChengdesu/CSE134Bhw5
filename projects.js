@@ -1,3 +1,5 @@
+var projectsLoaded = false;
+
 function createProject(project, container) {
 
     // Create a new element <project-card>
@@ -28,9 +30,16 @@ function createProject(project, container) {
 }
 
 function loadLocalStorage() {
+    if(projectsLoaded) {
+
+        const reload = confirm('Are you sure you want to reload the projects? This will append the loaded projects to the existing ones.');
+        if(!reload) return;
+
+    }
     const projects = JSON.parse(localStorage.getItem('projects'));
     const container = document.querySelector('#projects-container');
     projects.forEach(project => createProject(project, container));
+    projectsLoaded = true;
 }
 
 function saveLocalStorage(projects) {
@@ -38,10 +47,17 @@ function saveLocalStorage(projects) {
 }
 
 async function loadRemoteStorage() {
+    if(projectsLoaded) {
+
+        const reload = confirm('Are you sure you want to reload the projects? This will append the loaded projects to the existing ones.');
+        if(!reload) return;
+
+    }
     const response = await fetch('https://api.jsonbin.io/v3/b/67d7a2758960c979a573088b');
     const projects = (await response.json()).record.projects;
     const container = document.querySelector('#projects-container');
     projects.forEach(project => createProject(project, container));
+    projectsLoaded = true;
 }
 
 // On page load, fetch the projects and create a card for each
