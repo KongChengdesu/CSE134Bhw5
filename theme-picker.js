@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load saved theme
     const selectedTheme = localStorage.getItem('theme') || 'light';
+    console.log(selectedTheme);
     const customTheme = localStorage.getItem('custom-theme');
     if (customTheme && selectedTheme === 'custom') {
         applyTheme(JSON.parse(customTheme));
@@ -20,6 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         textColorInput.value = '#000';
         errorColorInput.value = '#b50000';
         tertiaryColorInput.value = '#f0f0f0';
+        localStorage.setItem('custom-theme', JSON.stringify({
+            name: 'custom',
+            primaryColor: primaryColorInput.value,
+            secondaryColor: secondaryColorInput.value,
+            textColor: textColorInput.value,
+            errorColor: errorColorInput.value,
+            tertiaryColor: tertiaryColorInput.value
+        }));
     }
 
     themeSelect.addEventListener('change', () => {
